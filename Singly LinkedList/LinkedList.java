@@ -18,6 +18,12 @@ public class LinkedList{
         }
         size++;
     }
+    public void insertAtBack(int value){
+        Node node = new Node(value);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
     public void display(){
         Node temp = head;
         while(temp != null){
