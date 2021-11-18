@@ -6,6 +6,7 @@ public class Main
 		list.insertAtFirst(5);
 		list.insertAtFirst(56);
 		list.insertAtFirst(54);
+		list.insertAtBack(58);
 		list.display();
 	}
 }
