@@ -19,6 +19,9 @@ public class LinkedList{
         size++;
     }
     public void insertAtBack(int value){
+        if(tail == null){
+           insertAtFirst(value);
+        }
         Node node = new Node(value);
         tail.next = node;
         tail = node;
