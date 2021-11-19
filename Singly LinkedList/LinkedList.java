@@ -27,6 +27,25 @@ public class LinkedList{
         tail = node;
         size++;
     }
+    public void insertAtIndex(int value, int index){
+        if(index == 0){
+            insertAtFirst(value);
+            return;
+        }
+        if(index == length){
+            insertAtBack(value);
+            return;
+        }
+        
+        Node temp = head;
+        for (int i = 1; i < index; i++){
+            temp = temp.next;
+        }
+            
+        Node node = new Node(value, temp.next);
+        temp.next = node;
+        size++;
+    }
     public void display(){
         Node temp = head;
         while(temp != null){
