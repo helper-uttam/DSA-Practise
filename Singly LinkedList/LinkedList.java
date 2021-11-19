@@ -8,6 +8,7 @@ public class LinkedList{
         this.size = 0;
     }
     
+    //  function to add nodes 
     public void insertAtFirst(int value){
         Node node = new Node(value);
         node.next = head;
@@ -46,6 +47,14 @@ public class LinkedList{
         temp.next = node;
         size++;
     }
+    
+    
+     //  function to remove nodes 
+     public void remove_first(){
+        head = head.next;
+      }
+    
+    //function to display
     public void display(){
         Node temp = head;
         while(temp != null){
