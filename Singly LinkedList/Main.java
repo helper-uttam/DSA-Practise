@@ -11,7 +11,7 @@ public class Main
 		list.insertAtBack(59);
 		
 		list.remove_first();
-			
+		list.remove_back();	
 		list.display();
 	}
 }
