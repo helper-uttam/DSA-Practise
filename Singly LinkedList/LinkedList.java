@@ -33,7 +33,7 @@ public class LinkedList{
             insertAtFirst(value);
             return;
         }
-        if(index == length){
+        if(index == size){
             insertAtBack(value);
             return;
         }
@@ -64,12 +64,26 @@ public class LinkedList{
         size--;
         temp.next = null;
     }
-    
+    public void removeFrom(int index){
+        if(index == 0){
+            remove_first();
+            return;
+        }
+        if(index == size-1){
+            remove_back();
+            return;
+        }
+        Node temp = head;
+        for (int i=1; i<index; i++){
+            temp = temp.next;
+        } 
+        temp.next = temp.next.next;
+    }
     //function to display
     public void display(){
         Node temp = head;
         while(temp != null){
-            System.out.println(temp.value);
+            System.out.print(temp.value + " ");
             temp = temp.next;
         }
     }
