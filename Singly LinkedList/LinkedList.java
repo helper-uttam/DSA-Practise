@@ -52,7 +52,18 @@ public class LinkedList{
      //  function to remove nodes 
      public void remove_first(){
         head = head.next;
+         size--;
       }
+    public void remove_back(){
+        Node temp = head;
+        int i = 0;
+        while( i < size-2){
+            temp = temp.next;
+            i++;
+        }
+        size--;
+        temp.next = null;
+    }
     
     //function to display
     public void display(){
