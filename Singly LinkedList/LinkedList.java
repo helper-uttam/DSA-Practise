@@ -22,6 +22,7 @@ public class LinkedList{
     public void insertAtBack(int value){
         if(tail == null){
            insertAtFirst(value);
+            return;
         }
         Node node = new Node(value);
         tail.next = node;
